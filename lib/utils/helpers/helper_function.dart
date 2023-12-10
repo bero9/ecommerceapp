@@ -1,8 +1,11 @@
+import 'dart:core';
+import 'dart:core';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:intl/intl.dart';
 
 class THelperFunction {
   static Color? getColor(String value) {
@@ -65,4 +68,28 @@ class THelperFunction {
   static bool isDarkMode(BuildContext context){
     return Theme.of(context).brightness == Brightness.dark;
   }
+  static Size screenSize(BuildContext context){
+    return MediaQuery.of(context!).size;
+  }
+  static double ScreanHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+  }
+  static double ScreanWidht(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
+  static String getformatDate(DateTime date, {String format = 'dd MMM yyyy'}){
+    return DateFormat(format).format(date);
+  }
+  static List<T> removeDuplicates<T>(List<T> list){
+    return list.toSet().toList();
+  }
+  static List<Widget> wrapWidget(List<Widget> widgets,int rowSize){
+    final wrappedList = <Widget>[];
+    for(var i=0;i<widgets.length;i+=rowSize){
+      final rowChildren = widgets.sublist(i,i+rowSize>widgets.length?widgets.length :i +   rowSize);
+      wrappedList.add(Row(children: rowChildren,));
+    }
+    return wrappedList;
+  }
+
 }

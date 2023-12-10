@@ -6,6 +6,6 @@ import 'Appclass.dart';
 
 void main() {
   runApp(const App());
-print(TFormatters.internationalFormatPhonNumber('9636465465'));
+
 }
 
