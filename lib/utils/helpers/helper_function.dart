@@ -1,7 +1,7 @@
 import 'dart:core';
 import 'dart:core';
 import 'dart:ui';
-
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -71,11 +71,11 @@ class THelperFunction {
   static Size screenSize(BuildContext context){
     return MediaQuery.of(context!).size;
   }
-  static double ScreanHeight(BuildContext context) {
-    return MediaQuery.of(context).size.height;
+  static double ScreanHeight() {
+    return MediaQuery.of(Get.context!).size.height;
   }
-  static double ScreanWidht(BuildContext context) {
-    return MediaQuery.of(context).size.width;
+  static double ScreanWidht() {
+    return MediaQuery.of(Get.context!).size.width;
   }
   static String getformatDate(DateTime date, {String format = 'dd MMM yyyy'}){
     return DateFormat(format).format(date);
