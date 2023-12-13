@@ -1,4 +1,8 @@
+import 'package:ecommerceapp/features/authentication/screens/Password_Configration/forget_password.dart';
+import 'package:ecommerceapp/features/authentication/screens/Password_Configration/reset_password.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 
 
@@ -6,6 +10,7 @@ import '../../../../../utils/constans/Image_Strings.dart';
 import '../../../../../utils/constans/Text.dart';
 import '../../../../../utils/constans/colors.dart';
 import '../../../../../utils/constans/sizes.dart';
+import '../../signup_widget/sigup.dart';
 
 class TLoginForm extends StatelessWidget {
   const TLoginForm({
@@ -39,6 +44,7 @@ class TLoginForm extends StatelessWidget {
               const SizedBox(
                 height: 16.0 / 2,
               ),
+              ///Remember me
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -51,9 +57,9 @@ class TLoginForm extends StatelessWidget {
                       const Text("Rememer Me"),
                     ],
                   ),
-                  //Forget Button
+                  ///Forget Password
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () =>Get.to(()=>const ForgetPassword()),
                       child: const Text("Forget Password")),
                 ],
               ),
@@ -69,7 +75,7 @@ class TLoginForm extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () =>Get.to(()=>SignupScreen()),
                       child: const Text("Create Account"))),
 
             ],

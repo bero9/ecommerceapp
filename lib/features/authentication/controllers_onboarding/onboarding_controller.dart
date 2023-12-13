@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../screens/Login.dart';
+import '../screens/login/Login.dart';
 
 class OnBoarderController extends GetxController {
   static OnBoarderController get instance => Get.find();
@@ -16,11 +16,6 @@ Rx<int> currentPageIndex = 0.obs;
       int page =currentPageIndex.value + 1;
       pageController.jumpToPage(page);
     }
-  }
-
-  void skipPage() {
-    currentPageIndex.value=2;
-    pageController.jumpTo(2);
   }
 
   void dotNavigationClick(index) {
