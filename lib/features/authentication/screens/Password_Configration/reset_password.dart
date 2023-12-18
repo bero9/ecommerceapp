@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../../../utils/constans/sizes.dart';
 import '../../../../utils/helpers/helper_function.dart';
+import '../login/Login.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
@@ -15,7 +16,7 @@ class ResetPassword extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           actions: [
-            IconButton(onPressed: ()=>Get.back, icon: Icon(CupertinoIcons.clear))
+            IconButton(onPressed: ()=>Get.to(()=>LoginScreen()), icon: Icon(CupertinoIcons.clear))
           ],
         ),
         body: SingleChildScrollView(
@@ -53,7 +54,7 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: ()=> Get.to(()=>LoginScreen()),
                     child: const Text('Done'),
                   ),
                 ),

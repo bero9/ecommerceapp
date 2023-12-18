@@ -24,12 +24,12 @@ class LoginScreen extends StatelessWidget {
             //Logo Title & subTitle
               ToLoginHeader(dark: dark),
           //Form
-          TLoginForm(),
+           const TLoginForm(),
           //Divider
           TFormDivider(dark: dark),
 
           ///Footer
-          TSocialBottom(),
+           const TSocialBottom(),
               ],
               ),
         )

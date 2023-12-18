@@ -42,6 +42,7 @@ dependencies:
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.8
   smooth_page_indicator: ^1.1.0
+  animated_bottom_navigation_bar: ^1.3.0
   # State Management
   get: ^4.6.6
   get_storage: ^2.1.1

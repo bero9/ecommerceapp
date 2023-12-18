@@ -6,6 +6,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 
 
+import '../../../../../Navigation_menu.dart';
 import '../../../../../utils/constans/Image_Strings.dart';
 import '../../../../../utils/constans/Text.dart';
 import '../../../../../utils/constans/colors.dart';
@@ -68,7 +69,7 @@ class TLoginForm extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {}, child: const Text("Sign In"))),
+                      onPressed: () =>Get.to(()=>NavigationMenu()), child: const Text("Sign In"))),
               const SizedBox(height: TSize.spaceBetweenItem),
 
               ///created acount Bottom
