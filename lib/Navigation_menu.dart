@@ -1,9 +1,8 @@
 import 'package:ecommerceapp/features/shop/screens/home/widget/StoreScrean.dart';
-import 'package:ecommerceapp/features/shop/screens/home/widget/home.dart';
+import 'package:ecommerceapp/features/shop/screens/home/widget/homeScrean.dart';
 import 'package:ecommerceapp/features/shop/screens/home/widget/profileScrean.dart';
-import 'package:ecommerceapp/features/shop/screens/home/widget/wishlist.dart';
+import 'package:ecommerceapp/features/shop/screens/home/widget/wishlistScrean.dart';
 import 'package:ecommerceapp/utils/helpers/helper_function.dart';
-import 'package:ecommerceapp/widgets/store_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
