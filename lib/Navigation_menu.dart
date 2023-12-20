@@ -1,7 +1,7 @@
-import 'package:ecommerceapp/features/shop/screens/home/widget/StoreScrean.dart';
-import 'package:ecommerceapp/features/shop/screens/home/widget/homeScrean.dart';
-import 'package:ecommerceapp/features/shop/screens/home/widget/profileScrean.dart';
-import 'package:ecommerceapp/features/shop/screens/home/widget/wishlistScrean.dart';
+import 'package:ecommerceapp/features/shop/screens/home/StoreScrean.dart';
+import 'package:ecommerceapp/features/shop/screens/home/homeScrean.dart';
+import 'package:ecommerceapp/features/shop/screens/home/profileScrean.dart';
+import 'package:ecommerceapp/features/shop/screens/home/wishlistScrean.dart';
 import 'package:ecommerceapp/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
