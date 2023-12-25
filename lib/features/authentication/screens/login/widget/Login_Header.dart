@@ -20,10 +20,10 @@ class ToLoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(
-            height: 150,
-            image: AssetImage(
-                dark ? TImage.LightAppLogo : TImage.darkAppLogo)),
+        // Image(
+        //     height: 150,
+        //     image: AssetImage(
+        //         dark ? TImage.LightAppLogo : TImage.darkAppLogo)),
         Text(
           TText.LoginTitle,
           style: Theme

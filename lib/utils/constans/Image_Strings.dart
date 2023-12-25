@@ -8,5 +8,18 @@ class TImage{
   static const String googleLogo = "assests/logos/google.png";
   static const String facebookLogo= "assests/logos/facebook.png";
 
+///Catigories
+  static const String sport = "assests/icons/Categories/sport.jpg";
+  static const String sport1 = "assests/icons/Categories/sport2.jpg";
+  static const String car = "assests/icons/Categories/cars.jpg";
+//Logo
+  static const String car1 = "assests/icons/Categories/car2.jpg";
+  static const String hh= "assests/icons/Categories/hh.jpg";
+  static const String shoose = "assests/icons/Categories/shoose.jpg";
+  static const String parfan= "assests/icons/Categories/parfan.jpg";
+  //banners
+  static const String car2 = "assests/images/banners/car2.jpg";
+  static const String car3= "assests/images/banners/car3.jpg";
+  static const String car4 = "assests/images/banners/car4.jpg";
 
 }
