@@ -1,10 +1,11 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerceapp/common/widgets/custom_shap/containers/circular_container.dart';
 import 'package:ecommerceapp/features/shop/screens/home/widget/home_Categories.dart';
-import 'package:ecommerceapp/utils/constans/colors.dart';
-import 'package:ecommerceapp/utils/helpers/helper_function.dart';
-import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:ecommerceapp/features/shop/screens/home/widget/promo_slider.dart';
 
-import '../../../../common/widgets/common_widget_image_text/virtecal_image_text.dart';
+import 'package:flutter/material.dart';
+
+import '../../../../common/widgets/Product_cart/TProduct_Card/TProductCardVertical.dart';
 import '../../../../common/widgets/custom_shap/containers/TPrimaryHeaderContainer.dart';
 import '../../../../common/widgets/custom_shap/containers/seacrh_container.dart';
 
@@ -37,7 +38,6 @@ class HomeScrean extends StatelessWidget {
                   ///SearchBar
                   TSearchContainer(
                     text: "Search in store",
-
                   ),
                   SizedBox(
                     height: TSize.spacing_between_sections,
@@ -66,6 +66,12 @@ class HomeScrean extends StatelessWidget {
                 ],
               ),
             ),
+
+            ///Body
+            Padding(
+                padding: EdgeInsets.all(TSize.Defaultspacing),
+                child: TPromoSlider(banners: [TImage.car2,TImage.car3,TImage.car4],)),
+            TProductCardVertical(),
           ],
         ),
       ),

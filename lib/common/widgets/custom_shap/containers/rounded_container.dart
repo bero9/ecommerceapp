@@ -1,24 +1,28 @@
+import 'package:ecommerceapp/utils/constans/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TCircularContainar extends StatelessWidget {
-  const TCircularContainar({
-    super.key,
-    this.width = 400,
-    this.height = 400,
-    this.radios = 400,
-    this.padding = 0,
+class TrounddedContainer extends StatelessWidget {
+  const TrounddedContainer({super.key,
+    this.width,
+    this.height,
+    this.radios = 16,
+    this.padding,
     this.child,
     this.background = Colors.white,
+    this.borderColor = Colors.white,
     this.margin,
-  });
+    this.showBorder = false});
 
   final double? width;
   final double? height;
   final double radios;
-  final double padding;
+  final EdgeInsetsGeometry? padding;
   final Widget? child;
   final Color background;
-  final EdgeInsets? margin;
+  final Color borderColor;
+  final EdgeInsetsGeometry? margin;
+  final bool showBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +30,9 @@ class TCircularContainar extends StatelessWidget {
       width: width,
       height: height,
       margin: margin,
-      padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radios),
+        border: showBorder? Border.all(color: borderColor):null,
         color: background,
       ),
       child: child,

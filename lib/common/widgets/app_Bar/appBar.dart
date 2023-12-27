@@ -7,7 +7,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TAppBar(
       {super.key,
       this.title,
-       this.showBackArrow=false,
+      this.showBackArrow = false,
       this.leadingIcon,
       this.action,
       this.leadingOnPressed});
@@ -27,10 +27,12 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left))
-            :leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)):null,
+            : leadingIcon != null
+                ? IconButton(
+                    onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+                : null,
         title: title,
         actions: action,
-
       ),
     );
   }
