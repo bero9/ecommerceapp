@@ -22,12 +22,12 @@ class TImage{
   static const String car3= "assests/images/banners/car3.jpg";
   static const String car4 = "assests/images/banners/car4.jpg";
   //product
-  static const String camera = "assests/images/product/camera.jpg";
-  static const String leps = "assests/images/product/leps.jpg";
-  static const String shafrah = "assests/images/product/shafrahs.jpg";
-  static const String shoes = "assests/images/product/shoes.jpg";
-  static const String untitled= "assests/images/product/Untitled.jpg";
-  static const String watch = "assests/images/product/watch.jpg";
+  static const String productcamera = "assests/images/product/camera.jpg";
+  static const String productleps = "assests/images/product/leps.jpg";
+  static const String productshafrah = "assests/images/product/shafrahs.jpg";
+  static const String productshoes = "assests/images/product/shoes.jpg";
+  static const String productuntitled= "assests/images/product/Untitled.jpg";
+  static const String productwatch = "assests/images/product/watch.jpg";
 
 
 }
