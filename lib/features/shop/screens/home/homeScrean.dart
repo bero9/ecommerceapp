@@ -9,6 +9,7 @@ import '../../../../common/widgets/Product_cart/TProduct_Card/TProductCardVertic
 import '../../../../common/widgets/custom_shap/containers/TPrimaryHeaderContainer.dart';
 import '../../../../common/widgets/custom_shap/containers/seacrh_container.dart';
 
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/text/Section_Heading.dart';
 import '../../../../utils/constans/Image_Strings.dart';
 import '../../../../utils/constans/sizes.dart';
@@ -20,59 +21,73 @@ class HomeScrean extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            /// Header
-            TPramaryHeaderContainar(
-              child: Column(
-                children: [
-                  ///AppBar
-                  THomeAppBar(),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              /// Header
+              const TPramaryHeaderContainar(
+                child: Column(
+                  children: [
+                    ///AppBar
+                    THomeAppBar(),
 
-                  SizedBox(
-                    height: TSize.spacing_between_sections,
-                  ),
-
-                  ///SearchBar
-                  TSearchContainer(
-                    text: "Search in store",
-                  ),
-                  SizedBox(
-                    height: TSize.spacing_between_sections,
-                  ),
-
-                  ///Categorties
-                  Padding(
-                    padding: EdgeInsets.only(left: TSize.Defaultspacing),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        TSeactionHeading(
-                          title: 'Popular Categories',
-                          showActionButtom: false,
-                          textColor: Colors.white,
-                        ),
-                        SizedBox(
-                          height: TSize.spacing_between_sections,
-                        ),
-
-                        ///Categorties
-                        THomeCategories()
-                      ],
+                    SizedBox(
+                      height: TSize.spacing_between_sections,
                     ),
-                  ),
-                ],
-              ),
-            ),
 
-            ///Body
-            Padding(
-                padding: EdgeInsets.all(TSize.Defaultspacing),
-                child: TPromoSlider(banners: [TImage.car2,TImage.car3,TImage.car4],)),
-            TProductCardVertical(),
-          ],
+                    ///SearchBar
+                    TSearchContainer(
+                      text: "Search in store",
+                    ),
+                    SizedBox(
+                      height: TSize.spacing_between_sections,
+                    ),
+
+                    ///Categorties
+                    Padding(
+                      padding: EdgeInsets.only(left: TSize.Defaultspacing),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TSeactionHeading(
+                            title: 'Popular Categories',
+                            showActionButtom: false,
+                            textColor: Colors.white,
+                          ),
+                          SizedBox(
+                            height: TSize.spacing_between_sections,
+                          ),
+
+                          ///Categorties
+                          THomeCategories()
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              ///Body
+              Padding(
+                  padding: const EdgeInsets.all(TSize.Defaultspacing),
+                  child: Column(
+                    children: [
+                      const TPromoSlider(
+                        banners: [TImage.car2, TImage.car3, TImage.car4],
+                      ),
+                      const SizedBox(
+                        height: TSize.spacing_between_sections,
+                      ),
+                      TGridLayout(
+                        itemCount: 4,
+                        itemBuilder: (_, index) => const TProductCardVertical(),
+                      )
+                    ],
+                  )),
+            ],
+          ),
         ),
       ),
     );
