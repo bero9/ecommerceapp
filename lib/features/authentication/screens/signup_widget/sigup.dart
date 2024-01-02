@@ -3,7 +3,6 @@ import 'package:ecommerceapp/features/authentication/screens/signup_widget/Wedge
 import 'package:ecommerceapp/utils/constans/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constans/sizes.dart';
 import '../../../../utils/helpers/helper_function.dart';
@@ -18,7 +17,7 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSize.Defaultspacing),
+          padding: const EdgeInsets.all(TSize.Defaultspacing),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
