@@ -1,5 +1,3 @@
-import 'package:ecommerceapp/utils/constans/colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TrounddedContainer extends StatelessWidget {
@@ -10,7 +8,7 @@ class TrounddedContainer extends StatelessWidget {
     this.padding,
     this.child,
     this.background = Colors.white,
-    this.borderColor = Colors.white,
+    this.borderColor = Colors.grey,
     this.margin,
     this.showBorder = false});
 
@@ -32,7 +30,7 @@ class TrounddedContainer extends StatelessWidget {
       margin: margin,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radios),
-        border: showBorder? Border.all(color: borderColor):null,
+        border: showBorder? Border.all(color: borderColor,):null,
         color: background,
       ),
       child: child,
