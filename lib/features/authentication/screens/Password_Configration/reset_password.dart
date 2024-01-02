@@ -16,17 +16,17 @@ class ResetPassword extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           actions: [
-            IconButton(onPressed: ()=>Get.to(()=>LoginScreen()), icon: Icon(CupertinoIcons.clear))
+            IconButton(onPressed: ()=>Get.to(()=>const LoginScreen()), icon: const Icon(CupertinoIcons.clear))
           ],
         ),
         body: SingleChildScrollView(
           child:  Padding(
-          padding: EdgeInsets.all(TSize.Defaultspacing),
+          padding: const EdgeInsets.all(TSize.Defaultspacing),
               child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image(
-                  image: AssetImage("assests/images/on_boarding_images/VeryfyEmail.jpg"),
+                  image: const AssetImage("assests/images/on_boarding_images/VeryfyEmail.jpg"),
                   width: THelperFunction.ScreanWidht() * 0.6,
                 ),
                 const SizedBox(
@@ -54,7 +54,7 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: ()=> Get.to(()=>LoginScreen()),
+                    onPressed: ()=> Get.to(()=>const LoginScreen()),
                     child: const Text('Done'),
                   ),
                 ),
@@ -66,7 +66,7 @@ class ResetPassword extends StatelessWidget {
                   width: double.infinity,
                   child: TextButton(
                     onPressed: (){},
-                    child:  Text('Reset E-mail',style: TextStyle(color: TColors.primary),),
+                    child:  const Text('Reset E-mail',style: TextStyle(color: TColors.primary),),
                   ),
                 ),
 

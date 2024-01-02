@@ -29,5 +29,6 @@ class TImage{
   static const String productuntitled= "assests/images/product/Untitled.jpg";
   static const String productwatch = "assests/images/product/watch.jpg";
 
-
+///user
+  static const String user = "assests/images/user/user.png";
 }

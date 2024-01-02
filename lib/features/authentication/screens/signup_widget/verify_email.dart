@@ -4,9 +4,7 @@ import 'package:ecommerceapp/utils/helpers/helper_function.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
-import 'package:get/get_utils/get_utils.dart';
 
 import '../../../../utils/constans/sizes.dart';
 
@@ -21,17 +19,17 @@ class VerifyEmailScreen extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () => Get.offAll(() => const LoginScreen()),
-                icon: Icon(CupertinoIcons.clear))
+                icon: const Icon(CupertinoIcons.clear))
           ],
         ),
         body: SingleChildScrollView(
             child: Padding(
-                padding: EdgeInsets.all(TSize.Defaultspacing),
+                padding: const EdgeInsets.all(TSize.Defaultspacing),
                 child: Column(
                   children: [
                     ///Image
                     Image(
-                      image: AssetImage(
+                      image: const AssetImage(
                           "assests/images/on_boarding_images/VeryfyEmail.jpg"),
                       width: THelperFunction.ScreanWidht() * 0.6,
                     ),
@@ -72,7 +70,7 @@ class VerifyEmailScreen extends StatelessWidget {
                     subTitle:  'Welcome to your unlimited shopping distination  '
                           'Your account is created unleash the joy of semless online shopping ',
                      image:   "assests/images/on_boarding_images/VeryfyEmail.jpg",
-                      onPressed:()=> Get.to(()=>LoginScreen()),
+                      onPressed:()=> Get.to(()=>const LoginScreen()),
 
 
                     )),child: const Text('Continue'),),),

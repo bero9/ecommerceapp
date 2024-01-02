@@ -2,12 +2,9 @@
 
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class TDeviceUtils {
@@ -36,7 +33,7 @@ class TDeviceUtils {
   }
 
   static double getScreanHeight(BuildContext context) {
-    return MediaQuery.of(context!).size.height;
+    return MediaQuery.of(context).size.height;
   }
 
   static double getScreanWidht(BuildContext context) {
@@ -44,11 +41,11 @@ class TDeviceUtils {
   }
 
   static double getPixelRatio(BuildContext context) {
-    return MediaQuery.of(context!).devicePixelRatio;
+    return MediaQuery.of(context).devicePixelRatio;
   }
 
   static double getStetusBarHeigh(BuildContext context) {
-    return MediaQuery.of(context!).padding.top;
+    return MediaQuery.of(context).padding.top;
   }
   static double getBottomNavigationBarHeigh() {
     return kBottomNavigationBarHeight;
@@ -61,7 +58,7 @@ class TDeviceUtils {
     return viewInsets.bottom;
   }
   static Future<bool> isKeyBoardVisible(BuildContext context) async {
-    final viewInsets = View.of(context!).viewInsets;
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom>0;
   }
   static Future<bool> isPhisicalDevice() async {

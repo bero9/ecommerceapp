@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/features/authentication/screens/Password_Configration/forget_password.dart';
-import 'package:ecommerceapp/features/authentication/screens/Password_Configration/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -8,7 +7,6 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../Navigation_menu.dart';
 import '../../../../../utils/constans/Image_Strings.dart';
-import '../../../../../utils/constans/Text.dart';
 import '../../../../../utils/constans/colors.dart';
 import '../../../../../utils/constans/sizes.dart';
 import '../../signup_widget/sigup.dart';
@@ -69,14 +67,14 @@ class TLoginForm extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () =>Get.to(()=>NavigationMenu()), child: const Text("Sign In"))),
+                      onPressed: () =>Get.to(()=>const NavigationMenu()), child: const Text("Sign In"))),
               const SizedBox(height: TSize.spaceBetweenItem),
 
               ///created acount Bottom
               SizedBox(
                   width: double.infinity,
                   child: OutlinedButton(
-                      onPressed: () =>Get.to(()=>SignupScreen()),
+                      onPressed: () =>Get.to(()=>const SignupScreen()),
                       child: const Text("Create Account"))),
 
             ],

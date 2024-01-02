@@ -1,10 +1,6 @@
 import 'dart:core';
-import 'dart:core';
-import 'dart:ui';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
 
 class THelperFunction {
@@ -30,17 +26,18 @@ class THelperFunction {
     } else if (value == 'deepOrange') {
       return Colors.deepOrange;
     }
+    return null;
   }
 
   static void showSnackBar(String messege, BuildContext context) {
-    ScaffoldMessenger.of(context!).showSnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(messege)),
     );
   }
 
   static void showAlert(String title, String message, BuildContext context) {
     showDialog(
-      context: context!,
+      context: context,
       builder: (context) {
         return AlertDialog(
           title: Text(title),
@@ -69,7 +66,7 @@ class THelperFunction {
     return Theme.of(context).brightness == Brightness.dark;
   }
   static Size screenSize(BuildContext context){
-    return MediaQuery.of(context!).size;
+    return MediaQuery.of(context).size;
   }
   static double ScreanHeight() {
     return MediaQuery.of(Get.context!).size.height;

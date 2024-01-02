@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Product_cart/TProduct_Card/TProductCardVertical.dart';
 
 class TGridLayout extends StatelessWidget {
   const TGridLayout(
@@ -10,7 +9,7 @@ class TGridLayout extends StatelessWidget {
       required this.itemBuilder});
 
   final int itemCount;
-  final double mainAxisExtent;
+  final double ?mainAxisExtent;
   final Widget? Function(BuildContext, int) itemBuilder;
 
   @override
@@ -20,11 +19,11 @@ class TGridLayout extends StatelessWidget {
       itemCount: itemCount,
       padding: EdgeInsets.zero,
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,
-        mainAxisExtent: 288,
+        mainAxisExtent: mainAxisExtent,
       ),
       itemBuilder: itemBuilder,
     );

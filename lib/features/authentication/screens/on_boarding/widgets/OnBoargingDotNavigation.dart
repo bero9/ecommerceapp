@@ -19,6 +19,7 @@ class OnBoargingDotNavigation extends StatelessWidget {
         left: TSize.Defaultspacing,
 
         child: SmoothPageIndicator(
+
           effect:ExpandingDotsEffect(activeDotColor: dark? TColors.light: TColors.dark,dotHeight: 6),
           controller: conroller.pageController,
           onDotClicked: conroller.dotNavigationClick,
