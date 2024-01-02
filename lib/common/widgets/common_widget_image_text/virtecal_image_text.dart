@@ -10,7 +10,7 @@ class TVirtecalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor=Colors.white,
-    this.backgroundColor=Colors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -50,14 +50,17 @@ class TVirtecalImageText extends StatelessWidget {
             ),
             SizedBox(
                 width: 55,
-                child: Text(
-                  title,
-                  style: Theme.of(context)
-                      .textTheme
-                      .labelMedium!
-                      .apply(color: textColor),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
+                    title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelMedium!
+                        .apply(color: textColor),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ))
           ],
         ),

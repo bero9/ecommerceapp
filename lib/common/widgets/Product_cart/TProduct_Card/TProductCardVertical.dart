@@ -5,12 +5,12 @@ import 'package:ecommerceapp/utils/constans/colors.dart';
 import 'package:ecommerceapp/utils/constans/sizes.dart';
 import 'package:ecommerceapp/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/get_utils.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../styles/Tshadow_Style.dart';
 import '../../icon/TCircularIcon.dart';
-import '../../layouts/Tproduct_Price_Text.dart';
+import '../../text/Tproduct_Price_Text.dart';
+import '../../text/TBrandTitleWithVerefiedIcon.dart';
 import '../../text/product_title_text.dart';
 
 class TProductCardVertical extends StatelessWidget {
@@ -20,7 +20,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunction.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -59,7 +59,7 @@ class TProductCardVertical extends StatelessWidget {
                     ),
                   ),
 
-                  ///favorate Icon Button
+                  ///favorite Icon Button
                   Positioned(
                       top: 0,
                       right: 0,
@@ -73,67 +73,59 @@ class TProductCardVertical extends StatelessWidget {
             ),
 
             /// -- Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSize.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSize.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
-                    title: 'beatiful Black Camera',
+                  TProductTitleText(
+                    title: 'beautiful Black Camera',
                     smalsize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSize.spaceBetweenItem / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Canon',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSize.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSize.iconxs,
-                      )
-                    ],
-                  ),
+                  TBrandTitleWithVerefiedIcon(title: 'Canon',),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///Price
-                      const TProductPriceText(Price: '35.5'),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            bottomRight: Radius.circular(16),
-                          )
-                        ),
-                        child: const SizedBox(
-                          width: 32*1.2,
-                          height: 32*1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
-            )
+            ),
+
+            //Todo : Add Spacer() hear to keep the height of each Box same in case 1 or 2 lines of Headings
+            const Spacer(),
+
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ///Price
+                const Padding(
+                  padding: EdgeInsets.only(left: TSize.sm),
+                  child: TProductPriceText(Price: '35.5'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        bottomRight: Radius.circular(16),
+                      )),
+                  child: const SizedBox(
+                    width: 32 * 1.2,
+                    height: 32 * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
