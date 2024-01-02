@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TGridLayout extends StatelessWidget {
   const TGridLayout(
       {super.key,
@@ -9,7 +8,7 @@ class TGridLayout extends StatelessWidget {
       required this.itemBuilder});
 
   final int itemCount;
-  final double ?mainAxisExtent;
+  final double? mainAxisExtent;
   final Widget? Function(BuildContext, int) itemBuilder;
 
   @override
@@ -19,7 +18,7 @@ class TGridLayout extends StatelessWidget {
       itemCount: itemCount,
       padding: EdgeInsets.zero,
       shrinkWrap: true,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,
