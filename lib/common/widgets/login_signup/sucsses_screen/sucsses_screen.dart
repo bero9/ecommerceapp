@@ -1,7 +1,4 @@
-import 'package:ecommerceapp/features/authentication/screens/login/Login.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 import '../../../../utils/constans/sizes.dart';
 import '../../../../utils/helpers/helper_function.dart';
