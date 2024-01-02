@@ -1,9 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../utils/constans/Image_Strings.dart';
 import '../../../utils/constans/colors.dart';
-import '../../../utils/constans/sizes.dart';
 
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
