@@ -6,8 +6,10 @@ import '../images/TCircularImage.dart';
 
 class TUserProfileTitle extends StatelessWidget {
   const TUserProfileTitle({
-    super.key,
+    super.key,required this.onpressed,
   });
+
+  final VoidCallback onpressed;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class TUserProfileTitle extends StatelessWidget {
             Theme.of(context).textTheme.bodyMedium!.apply(color: Colors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onpressed,
         icon: const Icon(
           Iconsax.edit,
           color: Colors.white,

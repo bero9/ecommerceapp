@@ -3,10 +3,13 @@ import 'package:ecommerceapp/common/widgets/custom_shap/containers/TPrimaryHeade
 import 'package:ecommerceapp/common/widgets/text/Section_Heading.dart';
 import 'package:ecommerceapp/utils/constans/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/ListTile/Settings_menu_tile.dart';
 import '../../../../common/widgets/ListTile/User_tile_profile.dart';
+import '../profile/ProfileScrean.dart';
 
 class SettingsScrean extends StatelessWidget {
   const SettingsScrean({super.key});
@@ -31,7 +34,7 @@ class SettingsScrean extends StatelessWidget {
                 ),
 
                 ///User profile Card
-                const TUserProfileTitle(),
+                 TUserProfileTitle(onpressed: () => Get.to(()=> ProfileScrean()),),
                 const SizedBox(
                   height: TSize.spacing_between_sections,
                 ),
