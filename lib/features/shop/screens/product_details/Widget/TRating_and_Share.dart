@@ -16,21 +16,21 @@ class TRating_and_Share extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(Iconsax.star5,color: Colors.amber,size: 24,),
-            SizedBox(width: TSize.spaceBetweenItem/2,),
+            const Icon(Iconsax.star5,color: Colors.amber,size: 24,),
+            const SizedBox(width: TSize.spaceBetweenItem/2,),
             Text.rich(TextSpan(
                 children: [
                   TextSpan(
                     text: '5.0',style:  Theme.of(context).textTheme.bodyLarge,
 
                   ),
-                  TextSpan(text: '(199')
+                  const TextSpan(text: '(199')
                 ]
 
             ))
           ],
         ),
-        IconButton(onPressed: (){}, icon: Icon(Icons.share,size: 20,))
+        IconButton(onPressed: (){}, icon: const Icon(Icons.share,size: 20,))
       ],
     );
   }

@@ -26,10 +26,10 @@ class TproductImageSlider extends StatelessWidget {
         child: Stack(
           children: [
             ///
-            SizedBox(
+            const SizedBox(
               height: 400,
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(16),
                 child: Center(
                   child: Image(
                     image: AssetImage(TImage.productcamera),

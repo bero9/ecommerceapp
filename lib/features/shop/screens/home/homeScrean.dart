@@ -1,7 +1,9 @@
+import 'package:ecommerceapp/features/shop/screens/all_product/all_product.dart';
 import 'package:ecommerceapp/features/shop/screens/home/widget/home_Categories.dart';
 import 'package:ecommerceapp/features/shop/screens/home/widget/promo_slider.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/Product_cart/TProduct_Card/TProductCardVertical.dart';
 import '../../../../common/widgets/custom_shap/containers/TPrimaryHeaderContainer.dart';
@@ -80,7 +82,7 @@ class HomeScrean extends StatelessWidget {
                       height: TSize.spacing_between_sections,
                     ),
                     /// ---Heading
-                    const TSeactionHeading(title: 'Popular Product'),
+                     TSeactionHeading(title: 'Popular Product',onPressd: ()=>Get.to(()=>const TAllProduct()),),
                     const SizedBox(
                       height: TSize.spaceBetweenItem,
                     ),

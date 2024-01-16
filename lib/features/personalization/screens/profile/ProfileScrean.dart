@@ -46,18 +46,18 @@ class ProfileScrean extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem / 2,
             ),
             const Divider(),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem,
             ),
-            TSeactionHeading(
+            const TSeactionHeading(
               title: 'Profile Seaction :',
               showActionButtom: false,
             ),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem,
             ),
             Profile_Menu(
@@ -70,17 +70,17 @@ class ProfileScrean extends StatelessWidget {
               value: 'Ber9',
               onpressed: () {},
             ),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem / 2,
             ),
             const Divider(),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem,
             ),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem,
             ),
-            TSeactionHeading(
+            const TSeactionHeading(
               title: 'Personal Information :',
               showActionButtom: false,
             ),
@@ -110,13 +110,13 @@ class ProfileScrean extends StatelessWidget {
               value: '18/7/2002',
               onpressed: () {},
             ),
-            SizedBox(
+            const SizedBox(
               height: TSize.spaceBetweenItem / 2,
             ),
             const Divider(),
             Center(
                 child: TextButton(
-                    onPressed: () {}, child: Text('Close your Account',style: TextStyle(color: Colors.red),)))
+                    onPressed: () {}, child: const Text('Close your Account',style: TextStyle(color: Colors.red),)))
           ],
         ),
 

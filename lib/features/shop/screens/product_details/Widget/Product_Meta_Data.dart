@@ -8,9 +8,7 @@ import 'package:ecommerceapp/utils/constans/colors.dart';
 import 'package:ecommerceapp/utils/constans/enums.dart';
 import 'package:ecommerceapp/utils/constans/sizes.dart';
 import 'package:ecommerceapp/utils/helpers/helper_function.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class TProductMetaData extends StatelessWidget {
   const TProductMetaData({super.key});
@@ -27,7 +25,7 @@ class TProductMetaData extends StatelessWidget {
             TrounddedContainer(
               radios: TSize.sm,
               background: TColors.secondary.withOpacity(0.8),
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                   horizontal: TSize.sm, vertical: TSize.xs),
               child: Text(
                 '  25%  ',
@@ -37,7 +35,7 @@ class TProductMetaData extends StatelessWidget {
                     .apply(color: Colors.black),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: TSize.spaceBetweenItem,
             ),
             Text(
@@ -47,34 +45,34 @@ class TProductMetaData extends StatelessWidget {
                   .titleSmall!
                   .apply(decoration: TextDecoration.lineThrough),
             ),
-            SizedBox(
+            const SizedBox(
               width: TSize.spaceBetweenItem,
             ),
-            TProductPriceText(
+            const TProductPriceText(
               Price: ' 175',
               isLarg: true,
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSize.spaceBetweenItem / 1.5,
         ),
 
         ///title
-        TProductTitleText(title: 'Black Canon Camera'),
-        SizedBox(
+        const TProductTitleText(title: 'Black Canon Camera'),
+        const SizedBox(
           height: TSize.spaceBetweenItem / 1.5,
         ),
 
         ///stock status,
         Row(
           children: [
-            TProductTitleText(title: 'Status'),
+            const TProductTitleText(title: 'Status'),
             Text(' In Stock', style: Theme.of(context).textTheme.titleMedium),
           ],
         ),
 
-        SizedBox(
+        const SizedBox(
           height: TSize.spaceBetweenItem / 1.5,
         ),
 
@@ -88,7 +86,7 @@ class TProductMetaData extends StatelessWidget {
               height: 32,
               overlayColor: darkMode?Colors.white:Colors.black,
             ),
-            TBrandTitleWithVerefiedIcon(
+            const TBrandTitleWithVerefiedIcon(
                 title: 'Canon',
                 textSize: TextSize.medium,
               ),

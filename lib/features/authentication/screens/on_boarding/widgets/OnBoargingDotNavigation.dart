@@ -4,7 +4,7 @@ import '../../../../../utils/constans/colors.dart';
 import '../../../../../utils/constans/sizes.dart';
 import '../../../../../utils/devices/device_utility.dart';
 import '../../../../../utils/helpers/helper_function.dart';
-import '../../../controllers_onboarding/onboarding_controller.dart';
+import '../../../controllers/onboarding/onboarding_controller.dart';
 class OnBoargingDotNavigation extends StatelessWidget {
   const OnBoargingDotNavigation({
     super.key,

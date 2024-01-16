@@ -9,6 +9,9 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/ListTile/Settings_menu_tile.dart';
 import '../../../../common/widgets/ListTile/User_tile_profile.dart';
+import '../../../shop/screens/Cart/cart.dart';
+import '../../../shop/screens/Order/Order.dart';
+import '../address/adress.dart';
 import '../profile/ProfileScrean.dart';
 
 class SettingsScrean extends StatelessWidget {
@@ -34,7 +37,7 @@ class SettingsScrean extends StatelessWidget {
                 ),
 
                 ///User profile Card
-                 TUserProfileTitle(onpressed: () => Get.to(()=> ProfileScrean()),),
+                 TUserProfileTitle(onpressed: () => Get.to(()=> const ProfileScrean()),),
                 const SizedBox(
                   height: TSize.spacing_between_sections,
                 ),
@@ -59,19 +62,19 @@ class SettingsScrean extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Address',
                     subtitle: 'Set Shopping delivery address',
-                    ontap: () {},
+                    ontap: ()=> Get.to(()=>const adreesScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',
                     subtitle: 'Add,remove product and move to checkout',
-                    ontap: () {},
+                    ontap: () =>Get.to(const CartScrean()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subtitle: 'In-Progress and Completed Orders',
-                    ontap: () {},
+                    ontap: () =>Get.to(const TOrderScrean()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,

@@ -1,10 +1,10 @@
-import 'package:ecommerceapp/features/authentication/controllers_onboarding/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constans/colors.dart';
 import '../../../../../utils/constans/sizes.dart';
 import '../../../../../utils/devices/device_utility.dart';
 import '../../../../../utils/helpers/helper_function.dart';
+import '../../../controllers/onboarding/onboarding_controller.dart';
 class onBoardingNextButton extends StatelessWidget {
   const onBoardingNextButton({
     super.key,

@@ -17,21 +17,24 @@ class TProductPriceText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      currencySidn + Price,
-      maxLines: maxLines,
-      overflow: TextOverflow.ellipsis,
-      style: isLarg
-          ? Theme
-          .of(context)
-          .textTheme
-          .headlineMedium!
-          .apply(decoration: lineThrought ? TextDecoration.lineThrough : null)
-          : Theme
-          .of(context)
-          .textTheme
-          .titleLarge!
-          .apply(decoration: lineThrought ? TextDecoration.lineThrough : null),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Text(
+        currencySidn + Price,
+        maxLines: maxLines,
+        overflow: TextOverflow.ellipsis,
+        style: isLarg
+            ? Theme
+            .of(context)
+            .textTheme
+            .headlineMedium!
+            .apply(decoration: lineThrought ? TextDecoration.lineThrough : null)
+            : Theme
+            .of(context)
+            .textTheme
+            .titleLarge!
+            .apply(decoration: lineThrought ? TextDecoration.lineThrough : null),
+      ),
     );
   }
 }

@@ -31,4 +31,10 @@ class TImage{
 
 ///user
   static const String user = "assests/images/user/user.png";
+
+  ///payment
+  static const String visaCart = "assests/images/paymentMethod/Visa.jpgg";
+  static const String paybalCart= "assests/images/paymentMethod/paybal.jpg";
+  static const String bitcoinCart = "assests/images/paymentMethod/bitcoin.png";
+  static const String googlePlayCart= "assests/images/paymentMethod/google play.png";
 }
