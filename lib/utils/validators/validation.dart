@@ -1,6 +1,6 @@
 
 class TValidator{
-  static String? validatEmail(String? value)
+  static String? validateEmail(String? value)
   {
     if(value == null|| value.isEmpty){
       return 'Email is required.';
@@ -11,7 +11,7 @@ class TValidator{
     }
     return null;
 }
-  static String? validatPassword(String? value)
+  static String? validatePassword(String? value)
   {
     if(value == null|| value.isEmpty){
       return 'Password is required.';
@@ -30,7 +30,7 @@ class TValidator{
     }
     return null;
   }
-  static String? validatPhoneNumber(String? value)
+  static String? validatePhoneNumber(String? value)
   {
     if(value == null|| value.isEmpty){
       return 'PhoneNumber  is required.';
