@@ -18,9 +18,7 @@ class OnBoarderController extends GetxController {
   void nextPage() {
     if (currentPageIndex.value == 2) {
       final storage = GetStorage();
-
       storage.write('IsFirstTime', false);
-
       Get.offAll(const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;

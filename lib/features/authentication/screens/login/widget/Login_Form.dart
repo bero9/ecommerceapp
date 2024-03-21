@@ -9,7 +9,7 @@ import '../../../../../Navigation_menu.dart';
 import '../../../../../utils/constans/Image_Strings.dart';
 import '../../../../../utils/constans/colors.dart';
 import '../../../../../utils/constans/sizes.dart';
-import '../../signup_widget/sigup.dart';
+import '../../signup/signup.dart';
 
 class TLoginForm extends StatelessWidget {
   const TLoginForm({
